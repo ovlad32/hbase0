@@ -162,5 +162,15 @@ public class Launcher {
       System.out.print("Total Time in seconds for batch= " + total / 1000);
     }
   }
+  private void hginit() {
+    Configuration cfg = new HBaseGraphConfiguration()
+    .setInstanceType(InstanceType.DISTRIBUTED)
+    .setGraphNamespace("mygraph")
+    .setCreateTables(true)
+    .setRegionCount(numRegionServers)
+    .set("hbase.zookeeper.quorum", "127.0.0.1")
+    .set("zookeeper.znode.parent", "/hbase-unsecure");
+    HBaseGraph graph = (HBaseGraph) GraphFactory.open(cfg);
+  }
 
 }

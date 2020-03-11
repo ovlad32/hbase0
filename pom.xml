@@ -74,6 +74,11 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
             <version>1.8</version>
             <systemPath>${java.home}/../lib/tools.jar</systemPath>
         </dependency>
+        <dependency>
+            <groupId>io.hgraphdb</groupId>
+            <artifactId>hgraphdb</artifactId>
+            <version>3.0.0</version>
+        </dependency>
     </dependencies>
     <build>
         <sourceDirectory>${src.dir}</sourceDirectory>
